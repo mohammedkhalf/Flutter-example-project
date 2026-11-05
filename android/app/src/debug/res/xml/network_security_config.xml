@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Debug-only trust for Tamara corporate Netskope SSL inspection
+  (ns-swg.ca.tamara-ksa.goskope.com). Without this, Android WebView
+  rejects intercepted HTTPS with net_error -202 and shows a white screen.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+            <certificates src="@raw/netskope_certservice_ca" />
+            <certificates src="@raw/netskope_ca_tamara" />
+            <certificates src="@raw/netskope_ns_swg_ca" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

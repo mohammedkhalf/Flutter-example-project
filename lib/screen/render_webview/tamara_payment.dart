@@ -27,7 +27,7 @@ class _TamaraPaymentState extends State<TamaraPayment> {
               child: TamaraCheckout(
                 widget.url,
                 "tamara://checkout/success",
-                "tamara://checkout/fail",
+                "tamara://checkout/failure",
                 "tamara://checkout/cancel",
                 onPaymentSuccess: () {
                   _onPaymentSuccess();
